@@ -39,7 +39,7 @@ namespace staffapi
       // Register the Swagger generator, defining 1 or more Swagger documents
       services.AddSwaggerGen(c =>
       {
-        c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+        c.SwaggerDoc("v1", new Info { Title = "SDG Mock Employee Database", Version = "v1" });
       });
 
     }
@@ -71,7 +71,7 @@ namespace staffapi
       // specifying the Swagger JSON endpoint.
       app.UseSwaggerUI(c =>
       {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "SDG Mock Employee Database API");
         c.RoutePrefix = string.Empty;
       });
       app.UseMvc();

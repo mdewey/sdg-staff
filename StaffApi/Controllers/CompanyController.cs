@@ -35,6 +35,7 @@ namespace staffapi.Controllers
     }
 
     [HttpDelete]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<ActionResult<object>> DeleteAll()
     {
       var employees = _context.Employees;
@@ -45,6 +46,7 @@ namespace staffapi.Controllers
 
     // DELETE: api/Company/fakebook
     [HttpDelete("{companyKey}")]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public async Task<ActionResult<object>> DeletePerson(string companyKey)
     {
       // removes all employees for that company
